@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("partial/header") %>
+  </head>
+  <body>
+    <%- include("partial/nav") %>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="">
+            <h2>Doctors Signup</h2>
+            <form action="/doc/signup" method="post">
+              <div class="mb-1">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" />
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" />
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" />
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Specialization</label>
+                <input type="text" class="form-control" name="specialization" />
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Experience</label>
+                <input type="text" class="form-control" name="experience" />
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Fess</label>
+                <input type="number" class="form-control" name="fees" />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include("partial/footer") %>
+  </body>
+</html>

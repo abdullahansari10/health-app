@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor List</title>
+    <%- include("partial/header") %>
+  </head>
+  <body>
+    <%- include("partial/nav") %> 
+    <h2>Available Doctors</h2>
+    <ul>
+      <% doctor.forEach(doc => { %>
+      <li>
+        <strong><%= doc.name %> - <%= doc.specialization %> (<%= doc.experience %> yrs)</strong>
+        <form action="/app/book" method="POST" style="display: inline">
+          <input type="hidden" name="doctorId" class="form-control w-25 mt-2 mb-2" value="<%= doc.id %>" />
+          <span><input type="date" name="date" class="form-control w-25 mt-2 mb-2" required />
+          <button type="submit" class="btn btn-primary mb-2">Book Appointment</button></span>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+
+    <%- include("partial/footer") %>
+  </body>
+</html>

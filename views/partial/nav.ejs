@@ -1,0 +1,70 @@
+<nav
+  class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+  data-bs-theme="dark"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Inventory</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/doc/patient_list">Patients</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/user/doctor_list"
+            >Doctors</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Create Account
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/user/signup">Users</a></li>
+            <li><a class="dropdown-item" href="/doc/signup">Doctors</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Login
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/user/login">Users</a></li>
+            <li><a class="dropdown-item" href="/doc/login">Doctors</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<% if(locals.error){ %>
+<div class="alert alert-danger" role="alert"><%= error%></div>
+<% } %>
